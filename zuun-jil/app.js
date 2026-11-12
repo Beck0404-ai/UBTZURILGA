@@ -1003,7 +1003,7 @@ for (const c of cols) {
 const box = document.createElement('span');
 box.className = 'od';
 const strip = document.createElement('span');
-strip.textContent = c.seq.join('\n');
+for (const d of c.seq) { const cell = document.createElement('span'); cell.className = 'odc'; cell.textContent = d; strip.append(cell); }
 box.append(strip);
 odo.append(box);
 c.strip = strip;
@@ -1021,12 +1021,13 @@ const set = (n) => { for (const c of cols) c.strip.style.transform = `translateY
 set(0);
 rollOdo = () => {
 rollOdo = null;
-if (reduceMotion) { set(N); return; }
+const settle = () => { odo.textContent = String(TO); odo.classList.add('is-done'); };
+if (reduceMotion) { settle(); return; }
 const DUR = 2200, t0 = performance.now();
 const tick = (now) => {
 const p = Math.min(1, (now - t0) / DUR);
 set(N * (1 - Math.pow(1 - p, 3)));
-if (p < 1) requestAnimationFrame(tick);
+if (p < 1) requestAnimationFrame(tick); else settle();
 };
 requestAnimationFrame(tick);
 };

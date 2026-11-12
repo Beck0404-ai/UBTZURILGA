@@ -2402,3 +2402,9 @@ html[data-theme="snow"] .band--close::before { background-image: url(assets/art/
 
 /* greeting poem */
 .letter--poem p { text-align: center; line-height: 1.9; font-style: italic; }
+
+/* odometer: fixed-height cells so the last digit lands exactly on mobile */
+.odo .od span.odc { display: block; height: 1em; line-height: 1em; }
+.odo.is-done { display: inline; height: auto; overflow: visible; }
+/* organisation name: two lines, clear of the day/night switch */
+.cover-org { letter-spacing: .18em; margin-right: -.18em; line-height: 1.45; margin-top: max(36px, calc(env(safe-area-inset-top, 0px) + 40px)); }
