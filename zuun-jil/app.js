@@ -806,7 +806,7 @@ return artCache;
 const ensureFonts = async () => {
 try {
 await Promise.all([
-document.fonts.load('500 58px "Noto Serif Display"', 'УБТЗ Сайншанд Худалдаа Төв'),
+document.fonts.load('500 58px "Noto Serif Display"', 'УБТЗ Сайншанд Худалдааны Төв'),
 document.fonts.load('400 40px Montserrat', 'Сэтгэлийн үг өөрийн үүрэг'),
 document.fonts.load('600 30px Montserrat', '2026.12.04 ТҮҮХТ 70 ЖИЛИЙН ОЙ'),
 ]);
@@ -862,7 +862,7 @@ ctx.textAlign = 'center';
 let y = 130;
 if (art.logo) { const lw = 400, lh = lw * art.logo.height / art.logo.width; ctx.drawImage(art.logo, CX - lw / 2, y, lw, lh); y += lh + 44; }
 ctx.fillStyle = '#FBF3E2'; ctx.font = '500 58px "Noto Serif Display", Georgia, serif'; spacing(ctx, 1);
-ctx.fillText('УБТЗ Сайншанд Худалдаа Төв', CX, y + 52); spacing(ctx, 0);
+ctx.fillText('УБТЗ Сайншанд Худалдааны Төв', CX, y + 52); spacing(ctx, 0);
 y += 92;
 if (CARD_DATE) {
 ctx.fillStyle = '#F6C003'; ctx.font = '600 32px Montserrat, sans-serif'; spacing(ctx, 6);
@@ -913,7 +913,7 @@ const now = new Date();
 ctx.fillStyle = 'rgba(255,255,255,0.72)'; ctx.font = '400 26px Montserrat, sans-serif';
 ctx.fillText(`${now.getFullYear()} оны ${now.getMonth() + 1}-р сарын ${now.getDate()}`, CX, my + 22);
 ctx.fillStyle = 'rgba(255,255,255,0.9)'; ctx.font = '400 30px Montserrat, sans-serif';
-ctx.fillText('made with ♡ for УБТЗ Сайншанд Худалдаа Төв', CX, footerTop + 58);
+ctx.fillText('made with ♡ for УБТЗ Сайншанд Худалдааны Төв', CX, footerTop + 58);
 const fbLabel = 'urilga.online';
 ctx.font = '600 26px Montserrat, sans-serif';
 const lw = ctx.measureText(fbLabel).width, chip = 32, fgap = 12;
@@ -958,7 +958,7 @@ const file = new File([blob], 'zuun-jil-setgeliin-ug.png', { type: 'image/png' }
 try {
 await navigator.share({
 files: [file],
-title: 'УБТЗ Сайншанд Худалдаа Төв — түүхт 70 жилийн ой',
+title: 'УБТЗ Сайншанд Худалдааны Төв — түүхт 70 жилийн ой',
 text: 'Хамт олондоо өргөх сэтгэлийн үг',
 });
 } catch {  }
