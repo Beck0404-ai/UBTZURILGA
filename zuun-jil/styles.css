@@ -2408,3 +2408,14 @@ html[data-theme="snow"] .band--close::before { background-image: url(assets/art/
 .odo.is-done { display: inline; height: auto; overflow: visible; }
 /* organisation name: two lines, clear of the day/night switch */
 .cover-org { letter-spacing: .18em; margin-right: -.18em; line-height: 1.45; margin-top: max(36px, calc(env(safe-area-inset-top, 0px) + 40px)); }
+
+/* donation account */
+.sec--gift .sec-body { padding-top: calc(110 * var(--u)); padding-bottom: calc(80 * var(--u)); }
+.gift-card { margin: calc(40 * var(--u)) auto 0; max-width: 460px; padding: 24px 20px 22px; border: 1px solid rgba(232, 192, 96, .55); border-radius: 18px; background: linear-gradient(180deg, rgba(20, 40, 90, .55), rgba(8, 18, 44, .6)); box-shadow: 0 0 24px rgba(232, 192, 96, .12) inset; text-align: center; }
+.gift-bank { margin: 0; color: var(--g2, #E8C060); font: 600 15px/1.2 Montserrat, Arial, sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.gift-acc { margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 4px 12px; color: #FBF3E2; font: 600 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; letter-spacing: .06em; font-variant-numeric: tabular-nums; }
+.gift-pre { opacity: .7; font-size: .72em; }
+.gift-name { margin: 12px 0 18px; color: #FBF3E2; opacity: .9; font: 500 15px/1.4 Montserrat, Arial, sans-serif; }
+.gift-copy { margin: 0 auto; }
+html[data-theme] .gift-card { background: rgba(255, 255, 255, .7); }
+html[data-theme] .gift-acc, html[data-theme] .gift-name { color: var(--text); }

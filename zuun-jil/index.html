@@ -13,25 +13,25 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=m70v3">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=m70v4">
 <link rel="apple-touch-icon" href="favicon.svg">
 <style>html,body{margin:0;background:#07122A}</style>
 <noscript><style>.gate{display:none!important}</style></noscript>
-<link rel="stylesheet" href="styles.css?v=m70v3">
-<link rel="preload" as="image" href="assets/gate/gate-poster.jpg?v=m70v3">
+<link rel="stylesheet" href="styles.css?v=m70v4">
+<link rel="preload" as="image" href="assets/gate/gate-poster.jpg?v=m70v4">
 <link rel="preload" as="image" href="assets/art/hero-night.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link id="google-fonts" media="print" rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Serif+Display:wght@400;500;600&display=swap">
 </head>
-<body data-base="." data-date-iso="2026-12-04T10:00:00+08:00" data-v="m70v3" data-slug="zuun-jil">
+<body data-base="." data-date-iso="2026-12-04T10:00:00+08:00" data-v="m70v4" data-slug="zuun-jil">
 
 <div class="gate gate--film" id="gate" role="dialog" aria-modal="true" tabindex="0" aria-label="Гэрлийг асаах — УБТЗ Сайншанд Худалдаа Төв — түүхт 70 жилийн ой">
   <div class="g-stage" id="g-stage">
     <video class="g-vid" id="g-vid" playsinline muted preload="auto" disablepictureinpicture
-      poster="assets/gate/gate-poster.jpg?v=m70v3" width="720" height="1280">
-      <source src="assets/gate/gate.mp4?v=m70v3" type="video/mp4">
+      poster="assets/gate/gate-poster.jpg?v=m70v4" width="720" height="1280">
+      <source src="assets/gate/gate.mp4?v=m70v4" type="video/mp4">
     </video>
     <span class="g-grain" aria-hidden="true"></span>
     <div class="g-copy">
@@ -168,6 +168,20 @@
       </ol>
     </div>
   </section>
+  <section class="scene sec sec--gift" aria-labelledby="gift-h">
+    <span class="thread" aria-hidden="true"><i></i></span>
+    <span class="stars" aria-hidden="true"></span>
+    <div class="sec-body">
+      <span class="rule rv" aria-hidden="true"><i></i><b></b><i></i></span>
+      <h2 class="h-xl rv" id="gift-h"><span class="gt">Хандив өгөх данс</span></h2>
+      <div class="gift-card rv">
+        <p class="gift-bank">Хаан банк</p>
+        <p class="gift-acc"><span class="gift-pre">08000500</span><span class="gift-num" id="gift-num">5084220524</span></p>
+        <p class="gift-name">СНШХТ эдийн засагч Б.&nbsp;Хандивын рэн</p>
+        <button type="button" class="btn btn--gold gift-copy" id="gift-copy" data-copy="5084220524">Дансны дугаар хуулах</button>
+      </div>
+    </div>
+  </section>
 
   <section class="scene sec sec--close" aria-label="УБТЗ Сайншанд Худалдаа Төв, 1956 — 2026">
     <span class="thread" aria-hidden="true"><i></i></span>
@@ -190,6 +204,18 @@
 
 <audio id="bg-music" preload="auto" loop></audio>
 
-<script src="app.js?v=m70v3"></script>
+<script src="app.js?v=m70v4"></script>
+<script>
+(function () {
+  var b = document.getElementById('gift-copy'); if (!b) return;
+  var label = b.textContent;
+  b.addEventListener('click', function () {
+    var v = b.getAttribute('data-copy');
+    var done = function () { b.textContent = 'Хуулагдлаа ✓'; setTimeout(function () { b.textContent = label; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, fallback); else fallback();
+    function fallback() { var t = document.createElement('textarea'); t.value = v; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done(); } catch (e) {} document.body.removeChild(t); }
+  });
+})();
+</script>
 </body>
 </html>
