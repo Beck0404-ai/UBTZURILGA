@@ -2409,10 +2409,12 @@ html[data-theme="snow"] .band--close::before { background-image: url(assets/art/
 /* organisation name: two lines, clear of the day/night switch */
 .cover-org { letter-spacing: .18em; margin-right: -.18em; line-height: 1.45; margin-top: max(36px, calc(env(safe-area-inset-top, 0px) + 40px)); }
 
-/* donation account — small, at the very bottom */
-.gift-mini { margin: 34px auto 0; padding-top: 14px; max-width: 340px; border-top: 1px solid rgba(232, 192, 96, .3); text-align: center; color: #FBF3E2; opacity: .8; font: 400 12px/1.5 Montserrat, Arial, sans-serif; }
+/* donation account — at the very bottom */
+.gift-mini { margin: 40px auto 0; padding: 18px 16px 20px; max-width: 420px; border: 1px solid rgba(232, 192, 96, .45); border-radius: 16px; background: rgba(8, 18, 44, .45); text-align: center; color: #FBF3E2; font: 400 16px/1.5 Montserrat, Arial, sans-serif; }
 .gift-mini p { margin: 0; }
-.gift-mini-t { color: var(--g2, #E8C060); font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 4px !important; }
-.gift-mini-acc b { font-weight: 600; letter-spacing: .04em; }
-.gift-copy { margin-left: 4px; padding: 1px 8px; border: 1px solid rgba(232, 192, 96, .6); border-radius: 999px; background: transparent; color: var(--g2, #E8C060); font: 500 11px/1.5 Montserrat, Arial, sans-serif; cursor: pointer; }
-html[data-theme] .gift-mini { color: var(--text); }
+.gift-mini-t { color: var(--g2, #E8C060); font-weight: 600; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px !important; }
+.gift-mini-acc { font-size: 17px; }
+.gift-mini-acc b { display: inline-block; font-size: 24px; font-weight: 700; letter-spacing: .05em; margin: 2px 4px; }
+.gift-mini-name { margin-top: 8px !important; font-size: 15px; opacity: .9; }
+.gift-copy { display: inline-block; margin: 6px 0 0 4px; padding: 5px 14px; border: 1px solid rgba(232, 192, 96, .7); border-radius: 999px; background: transparent; color: var(--g2, #E8C060); font: 600 14px/1.4 Montserrat, Arial, sans-serif; cursor: pointer; }
+html[data-theme] .gift-mini { color: var(--text); background: rgba(255, 255, 255, .6); }
